@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano</title>
+
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Piano Virtual</h2>
+            <!-- (div.column>span)*2       ctrl+z para voltar na edição-->
+             <div class="column volume-slider"> 
+                <!-- Digitei input:range pra criar a estrutura abaixo -->
+                <span>Volume</span> <input type="range" min="0" max="1" step="any">
+            </div>
+             <div class="column keys-check">
+                <span>Teclas</span> <input type="checkbox" checked>
+            </div>
+        </header>
+        <!-- ul>li*16 -->
+        <!-- ul.piano-keys>(li.key>span)*16 -->
+        <ul class="piano-keys">
+            <li class="key white" data-key="a"><span>a</span></li>
+            <li class="key black" data-key="w"><span>w</span></li>
+            <li class="key white" data-key="s"><span>s</span></li>
+            <li class="key black" data-key="e"><span>e</span></li>
+            <li class="key white" data-key="d"><span>d</span></li>
+            <li class="key black" data-key="f"><span>f</span></li>
+            <li class="key white" data-key="t"><span>t</span></li>
+            <li class="key black" data-key="g"><span>g</span></li>
+            <li class="key white" data-key="y"><span>y</span></li>
+            <li class="key black" data-key="h"><span>h</span></li>
+            <li class="key white" data-key="u"><span>u</span></li>
+            <li class="key black" data-key="j"><span>j</span></li>
+            <li class="key white" data-key="k"><span>k</span></li>
+            <li class="key black" data-key="o"><span>o</span></li>
+            <li class="key white" data-key="l"><span>l</span></li>
+            <li class="key black" data-key="p"><span>p</span></li>
+            <li class="key white" data-key=";"><span>;</span></li>
+        </ul>
+    </div>
+    
+    <script src="./src/scripts/engine.js"></script>
+</body>
+
+</html>
+
+<!-- Para selecionar uma posição e digitar para todas as linhas abaixo,
+ posiciono o cursor onde desejo repetir a digitação dentro da frase e
+ ctrl+ alt + seta pra baixo. Isso selecionará todas as linhas na posição
+ em que eu desejo digitar. É só começar a digitar! 
+ 
+ Mas o mais incrível é que funciona para selecionar as linhas, selecionar
+ os valores com o shift, e colar em outra local linha a linha.-->
